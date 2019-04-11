@@ -13,19 +13,19 @@ public class TV_Remote implements Remote_Control{
 		
 	} 
 	
-	public void turnOn() {
+	public void turnTVOn() {
 		
 		on=true;
 	}
 
 	@Override
-	public void turnOff() {
+	public void turnTVOff() {
 		on=false;
 		
 	}
 
 	
-	public void setChannel(int newChannel) {
+	public void setTVChannel(int newChannel) {
 		if (on && newChannel >= 1 && newChannel <= 50) {
             channel = newChannel;
         }
@@ -33,7 +33,7 @@ public class TV_Remote implements Remote_Control{
 	}
 
 	
-	public void setVolume(int newVolumeLevel) {
+	public void setTvVolume(int newVolumeLevel) {
 		 if (on && newVolumeLevel >= 1 && newVolumeLevel <= 7) {
 	            volumeLevel = newVolumeLevel;
 	        }
@@ -41,7 +41,7 @@ public class TV_Remote implements Remote_Control{
 	}
 
 	
-	public void channelUp() {
+	public void channelNext() {
 		 if (on && channel < 50) {
 	            channel++;
 	        }
@@ -68,7 +68,7 @@ public class TV_Remote implements Remote_Control{
         }
 		
 	}
-	public void channelList() {
+	public void listOfChannel() {
 		
 		System.out.println(channelList);
 	}
@@ -84,5 +84,7 @@ public class TV_Remote implements Remote_Control{
 	public void displayFavoriteList() {
 		System.out.println(favoriteList);
 	}
+
+	
 
 }
